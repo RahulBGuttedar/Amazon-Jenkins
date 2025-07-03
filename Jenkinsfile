@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {lable: 'rahulwinnode'}
+      tools {
+        maven 'm360'  // This name must match what you configured
+    }
     environment {
         // Use PATH+EXTRA to append to PATH properly
         PATH = "/usr/bin:/bin:/opt/homebrew/bin"
@@ -8,7 +11,7 @@ pipeline {
             
         stage('pull scm') {
             steps {
-                git branch: 'main', url: 'https://github.com/PraveenKuber/Amazon-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/RahulBGuttedar/Amazon-Jenkins.git'
             }
         }
         stage('compile') {
