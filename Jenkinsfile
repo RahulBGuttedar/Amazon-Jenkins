@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-    label 'rahulwinnode'
-}
-      tools {
-        maven 'm360'  // This name must match what you configured
-    }
+
     environment {
         // Use PATH+EXTRA to append to PATH properly
         PATH = "/usr/bin:/bin:/opt/homebrew/bin"
