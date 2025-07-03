@@ -1,5 +1,7 @@
 pipeline {
-    agent {lable: 'rahulwinnode'}
+    agent {
+    label 'rahulwinnode'
+}
       tools {
         maven 'm360'  // This name must match what you configured
     }
